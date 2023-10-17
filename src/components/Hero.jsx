@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.png'
+import Toggle from './Toggle';
 
 
 function Hero() {
@@ -7,9 +8,12 @@ function Hero() {
     <header className='w-full flex justify-center items-center flex-col'>
       <nav className='flex justify-between items-center w-full mb-10 pt-3'>
         <img src={logo} alt="Express Extract Logo" className='w-36 object-contain'/>
-        <button type='button' onClick={() => window.open('https://github.com/xJuanPablo/ExpressExtract')} className='black_btn'>
-          GitHub
-        </button>
+        <div className='flex items-center'>
+          <button type='button' onClick={() => window.open('https://github.com/xJuanPablo/ExpressExtract')} className='black_btn mr-4'>
+            GitHub
+          </button>
+          <Toggle/>
+        </div>
       </nav>
       <h1 className='head_text'>Sift Through Information In the Blink of an Eye <br />
         <span className='orange_gradient'>OpenAI GPT-4k</span>
