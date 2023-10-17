@@ -99,11 +99,11 @@ function Demo() {
         ) : (
           article.summary && (
             <div className='flex flex-col gap-3'>
-              <h2 className='font-bold text-gray-600 text-xl'>
+              <h2 className='summary_h2'>
                 Article <span className='blue_gradient'>Summary</span>
               </h2>
               <div className='summary_box'>
-                <p className='font-medium text-sm text-gray-700'>
+                <p className='summary_paragraph'>
                   {article.summary}
                 </p>
               </div>
