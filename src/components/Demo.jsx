@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {FiLink2} from 'react-icons/fi'
 import {BiSearchAlt} from 'react-icons/bi'
+import { useLazyGetSummaryQuery } from '../services/article'
 
 
 function Demo() {
@@ -8,10 +9,38 @@ function Demo() {
   const [article, setArticle] = useState({
     url: '',
     summary: '',
-  })
+  });
+
+  const [allArticles, setAllArticles] = useState([])
+
+  const [getSummary, {error, isFetching}] = useLazyGetSummaryQuery();
+
+
+  useEffect(() => {
+    const articlesFromLocalStorage = JSON.parse(
+      localStorage.getItem('articles')
+    )
+    if(articlesFromLocalStorage){
+      setAllArticles(articlesFromLocalStorage)
+    }
+  }, []);
+
 
   const submit = async (e) => {
-    alert('OHHHHH')
+    e.preventDefault();
+    const {data} = await getSummary({ articleUrl: article.url})
+
+    if(data?.summary){
+      const newArticle = {...article, summary: data.summary};
+
+      const updatedArticalArr =[newArticle, ...allArticles];
+
+      setArticle(newArticle);
+
+      setAllArticles(updatedArticalArr)
+
+      localStorage.setItem('articles', JSON.stringify(updatedArticalArr))
+    }
   }
 
 

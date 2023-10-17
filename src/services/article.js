@@ -1,6 +1,7 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 
 const apiKey = import.meta.env.VITE_API_KEY
+//TODO: Add a function to adjust paragraph length
 
 export const articleApi = createApi({
   reducerPath: 'articleApi',
@@ -15,7 +16,9 @@ export const articleApi = createApi({
   }),
   endpoints: (builder) => ({
     getSummary: builder.query({
-      query: (params) => 'test'
+      query: (params) => `/summarize?url=${encodeURIComponent(params.articleUrl)}&length=3`
     })
   })
-})
+});
+
+export const {useLazyGetSummaryQuery} = articleApi;
