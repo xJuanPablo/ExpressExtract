@@ -14,6 +14,7 @@ function Demo() {
 
   const [allArticles, setAllArticles] = useState([])
 
+  const [copy, setCopy] = useState('');
   const [getSummary, {error, isFetching}] = useLazyGetSummaryQuery();
 
 
@@ -44,7 +45,11 @@ function Demo() {
     }
   }
 
-
+      const handleCopy = (copyURL) => {
+        setCopy(copyURL);
+        navigator.clipboard.writeText(copyURL);
+        setTimeout(() => setCopy(false), 3000)
+      }
 
   return (
     <section className='mt-16 w-full max-w-xl'>
@@ -70,7 +75,7 @@ function Demo() {
         <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
           {allArticles.map((item, index) => (
             <div key={`link-${index}`} onClick={() => setArticle(item)} className='link_card'>
-              <div className='copy_btn'>
+              <div className='copy_btn' onClick={() => handleCopy(item.url)}>
                 <BiDuplicate className='object-contain'/>
               </div>
               <p className='flex-1 text-blue-700 font-medium text-sm truncate'>
