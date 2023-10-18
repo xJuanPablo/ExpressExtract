@@ -26,8 +26,6 @@ Welcome to Express Extract, where I've crafted a React application as a playgrou
 - [ ] Choose number of paragraphs
 
 ## Built With
-<br>
-<br>
 <div align="center"> 
 <p>Front-End:</p>
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt='HTML5'/>
@@ -38,8 +36,6 @@ Welcome to Express Extract, where I've crafted a React application as a playgrou
 <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
 <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" />
 </div>
-<br>
-<br>
 
 
 ## Credit 
