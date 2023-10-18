@@ -17,17 +17,16 @@ Welcome to Express Extract, where I've crafted a React application as a playgrou
 ## Video Demo
 
 ## Key Features
-* Renders previously searched URL's 
+* Renders previously searched URLs 
 * Dark and Light toggle
-* Copy searched URL with a click of the button
-* Quickly retrieve previouse summarized articles
+* Copy the searched URL with a click of the button
+* Quickly retrieve previous summarized articles
 
 ## What's to Come
 - [ ] Choose number of paragraphs
 
 ## Built With
 <div align="center"> 
-<p>Front-End:</p>
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt='HTML5'/>
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
@@ -49,20 +48,20 @@ I would like to express my gratitude to the following services and people:
 
 
 ## Using 
-To use Express Extract, click [HERE](https://gleeful-piroshki-d88867.netlify.app/), then copy and paste an articles URL.
+To use Express Extract, click [HERE](https://gleeful-piroshki-d88867.netlify.app/), then copy and paste an article's URL.
 
 ## Installation
-To install Express Extract to your local environment:
+To install Express Extract in your local environment:
 
 1. Clone the repo
 ```sh
 git clone git@github.com:xJuanPablo/ExpressExtract.git
 ```
-2. In root directory run 
+2. In the root directory run 
 ```sh
 npm install
 ```
-3. Open application on localhost
+3. Open the application on localhost
 ```sh
 npm run build 
 ```
