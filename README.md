@@ -16,6 +16,12 @@ Welcome to Express Extract, where I've crafted a React application as a playgrou
 * [License](#license)
 ## Video Demo
 
+
+
+https://github.com/xJuanPablo/ExpressExtract/assets/135268267/02d1ac40-5828-449a-984a-3d7eac2a7676
+
+
+
 ## Key Features
 * Renders previously searched URLs 
 * Dark and Light toggle
